@@ -1,0 +1,85 @@
+
+
+body {
+    background: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.stopwatch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.digital-display {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 5.5em;
+    color: #00ff00;
+    background: #111;
+    padding: 20px 40px;
+    border-radius: 12px;
+    letter-spacing: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    min-width: 200px;/* this ensure the display doesn't shrink too much */
+    width: 700px;
+    height: 150px;
+    display: inline-block;/*This ensure the display maintains its size and doesn't shrink too much*/
+    /*min-width and display: inline-block; ensure the display doesn't shrink too much, so the change of size of the number does not generate visual noise*/
+    text-align: center;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+h1 {
+    font-family: 'Orbitron', 'Courier New', Courier, monospace;
+    color: #00ff00;
+    text-shadow: 0 2px 6px rgba(0,255,0,0.2);
+}
+
+button {
+    font-family: 'Orbitron', 'Courier New', Courier, monospace;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 0 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    color: black;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    min-width: 100px;
+}
+
+#toggle {
+    background: #72eb72;
+}
+#toggle:hover {
+    background: #00ff00;
+    color: #222;
+    transform: scale(1.1);
+}
+
+#reset {
+    background: #c171f0;
+}
+#reset:hover {
+    background: #c800ff;
+    color: #222;
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: auto;
+    color: #fff;
+    text-align: center;
+}
+.footer {
+    text-align: center;
+}
+    
