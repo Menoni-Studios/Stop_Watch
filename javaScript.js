@@ -96,8 +96,9 @@ canvas.height = window.innerHeight;
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nums = '0123456789';
-
 const alphabet = katakana + latin + nums;
+const emoji = ["👽","☠️","👾","😇","🥳","🫣","🤭","🤫","🤣","😂","😁","😃","😄","😎","😊","😉","😆","😅","😍","😗","🤗","🙂","😚","🤩","🫡","😶‍🌫️","😝","😛","🙃","🤪","🥳","🤖"];
+const fullSet = [...alphabet,...emoji];
 
 const fontSize = 16;
 const columns = canvas.width/fontSize;
@@ -111,15 +112,15 @@ for( let x = 0; x < columns; x++ ) {
 }
 
 const draw = () => {
-	context.fillStyle = 'rgba(12, 3, 29, 0.05)';
+	context.fillStyle = 'rgba(73, 8, 192, 0.05)';
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	
-	context.fillStyle = 'rgba(78, 10, 141, 1)';
+	context.fillStyle = 'rgba(110, 233, 39, 1)';
 	context.font = fontSize + 'px monospace';
 
 	for(let i = 0; i < rainDrops.length; i++)
 	{
-		const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+		const text = fullSet[Math.floor(Math.random() * fullSet.length)];
 		context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
 		
 		if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
@@ -129,4 +130,4 @@ const draw = () => {
 	}
 };
 
-setInterval(draw, 100);
+setInterval(draw, 150);
